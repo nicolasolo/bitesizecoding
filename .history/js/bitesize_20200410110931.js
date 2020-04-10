@@ -29,7 +29,7 @@ $(function() {
         $('<a>', { href: '?page='+(i+1)+'', text: ''+(i+1)+''}).appendTo(pagination);
       }
       showData(subArrays[numPage-1]);
-    }
+    };
   };
     xmlhttp.open("GET", url, true);
     xmlhttp.send(); 

@@ -1,12 +1,11 @@
 var products = document.querySelector("#products");
-var pagination = document.querySelector("#pagination");
-var i;
+var pagination = document.querySelector("#pagination")
 $(function() {
     function showData(arr) 
       {
         
-        var out = "";
-        for( i = 0; i < arr.length; i++) 
+        let out = "";
+        for(let i = 0; i < arr.length; i++) 
           {
             out += 
             ' ( <span> ' + arr[i].id + ' </span> )  ' +
@@ -24,12 +23,12 @@ $(function() {
     if (this.readyState == 4 && this.status == 200) {
       var items = JSON.parse(this.responseText);
       var subArrays = [];//arrays for pages
-      for (i = 0; i < Math.ceil(items.length/itemsPerPage); i++){
+      for (let i = 0; i < Math.ceil(items.length/itemsPerPage); i++){
         subArrays[i] = items.slice((i*itemsPerPage), (i*itemsPerPage) + itemsPerPage);
         $('<a>', { href: '?page='+(i+1)+'', text: ''+(i+1)+''}).appendTo(pagination);
       }
       showData(subArrays[numPage-1]);
-    }
+    };
   };
     xmlhttp.open("GET", url, true);
     xmlhttp.send(); 
