@@ -68,7 +68,7 @@ var i;
         var currentPage = window.location.search.substring(6);
         console.log(currentPage);
         var posts = JSON.parse(this.responseText);
-        var Pages = [];
+        POSTS_PER_PAGE = [];
 
 
 // Configurable variables

@@ -74,7 +74,7 @@ var i;
 // Configurable variables
 
 
-PAGINATION_SIZE = 10;
+
 
 /**
  * How we want the pagination to look like

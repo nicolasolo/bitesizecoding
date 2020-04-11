@@ -68,13 +68,13 @@ var i;
         var currentPage = window.location.search.substring(6);
         console.log(currentPage);
         var posts = JSON.parse(this.responseText);
-        var Pages = [];
+        all = [];
 
 
 // Configurable variables
 
 
-PAGINATION_SIZE = 10;
+
 
 /**
  * How we want the pagination to look like

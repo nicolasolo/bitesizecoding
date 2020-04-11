@@ -68,7 +68,9 @@ var i;
         var currentPage = window.location.search.substring(6);
         console.log(currentPage);
         var posts = JSON.parse(this.responseText);
-        var Pages = [];
+   
+    
+         posts = [];
 
 
 // Configurable variables
@@ -93,8 +95,8 @@ if (PAGINATION_SIZE % 2 === 0) {
 }
 
 // Calculate some meaningful variables to work with
-const noOfPages = Math.ceil(posts.length / POSTS_PER_PAGE);
-const allPages = Math.ceil(posts.length/ POSTS_PER_PAGE);
+const noOfPages = Math.ceil(posts.length / POSTS_PER_PAGE));
+const allPages = [...Array(noOfPages + 1).keys()].slice(1, noOfPages + 1);
 const firstPossibleVisiblePage = Math.max(1, currentPage - noOfPagesBehind);
 const lastPossibleVisiblePage = Math.min(currentPage + noOfPagesAhead, noOfPages);
 

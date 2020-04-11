@@ -64,17 +64,19 @@ var i;
 
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        var POSTS_PER_PAGE = 6; // count of recors per page
+        var itemsPerPage = 6; // count of recors per page
         var currentPage = window.location.search.substring(6);
         console.log(currentPage);
         var posts = JSON.parse(this.responseText);
-        var Pages = [];
+        var allPages = Math.ceil(items.length/itemsPerPage);
+    
+        const posts = [];
 
 
 // Configurable variables
-
-
-PAGINATION_SIZE = 10;
+const POSTS_PER_PAGE = 5;
+const CURRENT_PAGE = 13;
+const PAGINATION_SIZE = 10;
 
 /**
  * How we want the pagination to look like
@@ -93,10 +95,10 @@ if (PAGINATION_SIZE % 2 === 0) {
 }
 
 // Calculate some meaningful variables to work with
-const noOfPages = Math.ceil(posts.length / POSTS_PER_PAGE);
-const allPages = Math.ceil(posts.length/ POSTS_PER_PAGE);
-const firstPossibleVisiblePage = Math.max(1, currentPage - noOfPagesBehind);
-const lastPossibleVisiblePage = Math.min(currentPage + noOfPagesAhead, noOfPages);
+const noOfPages = Math.max(1, Math.ceil(posts.length / POSTS_PER_PAGE));
+const allPages = [...Array(noOfPages + 1).keys()].slice(1, noOfPages + 1);
+const firstPossibleVisiblePage = Math.max(1, CURRENT_PAGE - noOfPagesBehind);
+const lastPossibleVisiblePage = Math.min(CURRENT_PAGE + noOfPagesAhead, noOfPages);
 
 /**
  * Construct visible pages
@@ -117,7 +119,7 @@ if (noOfPages < PAGINATION_SIZE) {
     // Enough room on both end, just slice the allPages array
     visiblePages = allPages.slice(firstPossibleVisiblePage - 1, lastPossibleVisiblePage);
 }
-console.log('Current page', currentPage);
+console.log('Current page', CURRENT_PAGE);
 console.log('Visible pages', visiblePages);
 }
 };
