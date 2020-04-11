@@ -1,0 +1,57 @@
+.view{
+    height: 100vh;
+    width: 100%;
+    position: ;
+    overflow: hidden;
+    cursor: default;
+}
+.jarallax{
+    min-height: fit-content;
+}
+.white-text{
+    color: ;
+}
+.section-1{
+    position: absolute;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+span{
+    color: red;
+    border-radius: 50%;
+    background-color: antiquewhite;
+    text-align: center;
+    text-justify: newspaper;
+}
+.pagination{
+    align-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.pagination a{
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+.pagination a.active{
+    background-color: dodgerblue;
+    color: white;
+}
+
+.pagination a:hover:not(.active){
+    background-color: #ddd;
+}
+
+.nav{
+    height: 50px;
+    line-height: normal;
+}
+
+.cart{
+height: 100px;
+width: fit-content;
+}

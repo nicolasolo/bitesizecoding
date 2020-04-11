@@ -1,0 +1,74 @@
+.view{
+    height: 100%;
+    width: 100%;
+    position: ;
+    overflow: hidden;
+    cursor: default;
+}
+.justify-content-center{
+    justify-content: center;
+    align-items: center;
+}
+.pagination{
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+}
+.pagination::-webkit-scrollbar{
+    width: 0 !important;
+}
+.white-text{
+    color: #ddd;
+}
+.section-1{
+    position: absolute;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+span{
+    color: red;
+    border-radius: 50%;
+    background-color: antiquewhite;
+    text-align: center;
+    text-justify: newspaper;
+}
+.pagination{
+    align-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.pagination a{
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+.pagination a.active{
+    background-color: dodgerblue;
+    color: white;
+}
+
+.pagination a:hover:not(.active){
+    background-color: #ddd;
+}
+
+.nav{
+    height: 50px;
+    line-height: normal;
+}
+
+.cart{
+height: 100px;
+width: fit-content;
+}
+.card{
+    height:450px;
+}
+.card-body{
+    height: 300px;
+    overflow: ;
+    text-overflow: clip;
+}
