@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script>
+            $(function () {
+             $.getJSON( "json/1.json", function( data ) {
+    var items = [];
+    $.getJSON("/json/1.json", data,
+        function (data, textStatus, jqXHR) {
+            console.log
+        }
+    );
+    $.each( data, function(key) {
+      items.push(
+      '<div class="card" id="'+data[key].id+'">'+
+  '<div class="card-body">'+
+    '<h5 class="card-title">'+data[key].title+'</h5>'+
+    '<p class="card-text">'+data[key].title+'</p>'+
+    '</div>'+
+    '<div class="card-footer">'+
+    '<a href="blogs.html/'+data[key].id+'">more</a>'+
+    '</div>'+
+    '</div>' );
+    });
+   console.log(data);
+    $( "<div/>", {
+      "class": "card",
+      html: items.join( "" )
+    }).appendTo( "body" );
+  });
+});
+        </script>
+    </body>
+</html>

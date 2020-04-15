@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--
+        <script src="https://kit.fontawesome.com/9e80a3f6b7.js" crossorigin="anonymous"></script>-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="css/bitesize.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#"><strong>MDB</strong></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Profile</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline">
+                        <div class="md-form my-0">
+                            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar -->
+        <!-- Full Page Intro -->
+
+        <!-- Mask & flexbox options-->
+        <div class="mask rgba-black-light align-items-center">
+            <!-- Content -->
+            <div class="container">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-md-12 mb-4 white-text text-center">
+                        <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown"
+                            data-wow-delay="0.3s"><strong>Minimalist intro</strong></h1>
+                        <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s">
+                        <h5 class="text-uppercase mb-4 white-text wow fadeInDown" data-wow-delay="0.4s">
+                            <strong>Photography & design</strong></h5>
+                        <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">portfolio</a>
+                        <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">About me</a>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </div>
+            <!-- Content -->
+        </div>
+        <!-- Mask & flexbox options-->
+        </div>
+        <!-- Full Page Intro -->
+    </header>
+    <!-- Main navigation -->
+    <!--Main Layout-->
+    <main>
+        <div class="container">
+            <!--Grid row-->
+            <!-- News jumbotron -->
+            <div class="jumbotron text-center hoverable p-4">
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+
+                        <!-- Featured image -->
+                        <div class="view overlay">
+                            <img src="https://picsum.photos/600/400.jpg" class="img-fluid"
+                                alt="Sample image for first version of blog listing">
+                            <a>
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-7 text-md-left ml-3 mt-3">
+
+                        <!-- Excerpt -->
+                        <a href="#!" class="green-text">
+                            <h6 class="h6 pb-1"><i class="fas fa-desktop pr-1"></i> Work</h6>
+                        </a>
+
+                        <h4 class="h4 mb-4">This is title of the news</h4>
+
+                        <p class="font-weight-normal">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                            accusantium doloremque, totam
+                            rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur.</p>
+                        <p class="font-weight-normal">by <a><strong>Carine Fox</strong></a>, 19/08/2016</p>
+
+                        <a class="btn btn-success" id="next">Read more</a>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <button class="page-link" id="next">Prev</button>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="+1">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- News jumbotron -->
+        </div>
+    </main>
+    <!--Main Layout-->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            var category = document.querySelector(".pb-1");
+            var pageTitle = document.querySelector(".h4");
+            var pageBody = document.querySelector(".font-weight-normal");
+            var pageImage = document.querySelector(".img-fluid");
+            $.getJSON("/json/1.json",
+                function (data, i, textStatus, jqXHR) {
+                    
+                    var url =$(location).attr('href');
+                    var page = url.split('');
+                    
+                    var link = page[page.length - page.length ];
+                    var number = page[page.length - 1];
+                    console.log(location)
+                    console.log(link)
+                    console.log(number)
+                    $('#next').click(function (e) {
+                        e.preventDefault();
+                        console.log("clicked")
+                        url;
+                    });
+
+
+
+                    var prev = page[page.length * 1];
+                    var i;
+                    var item = data[number - 1];
+                    if (i = item) {
+                        category.innerHTML = data[number -1].category;
+                        pageTitle.innerHTML = data[number - 1].title;
+                        pageBody.innerHTML = data[number - 1].body;
+                       // pageImage.setAttribute('src', data[number - 1].userId);
+                        pageImage.setAttribute('alt', data[number - 1].title);
+                    }
+
+
+                }
+            );
+        });
+    </script>
+</body>
+
+</html>
